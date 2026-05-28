@@ -11,10 +11,10 @@ DOWNLOAD_DIR = os.path.join(os.path.dirname(__file__), "downloads")
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
 # Path to yt-dlp (use Homebrew version which has YouTube fixes)
-YT_DLP_PATH = os.environ.get("YT_DLP_PATH", "/opt/homebrew/bin/yt-dlp")
+YT_DLP_PATH = os.environ.get("YT_DLP_PATH", "yt-dlp")
 
 # Browser for yt-dlp cookie extraction (set to empty string to disable)
-COOKIES_BROWSER = os.environ.get("COOKIES_BROWSER", "brave")
+COOKIES_BROWSER = os.environ.get("COOKIES_BROWSER", "")
 
 # Build --cookies-from-browser args if configured
 COOKIE_ARGS = ["--cookies-from-browser", COOKIES_BROWSER] if COOKIES_BROWSER else []
